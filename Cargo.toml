@@ -1,0 +1,22 @@
+[package]
+name = "zek"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "zek"
+path = "src/main.rs"
+
+[dependencies]
+reqwest = { version = "0.12.9", features = ["json"] }
+tokio = { version = "1.42.0", features = ["full"] }
+pyo3 = { version = "0.18", features = ["auto-initialize"] }
+dirs = "5.0.1"
+log = "0.4.22"
+
+[build-dependencies]
+pyo3-build-config = "0.18"
+
+[package.metadata.maturin]
+bindings = "pyo3"
+
